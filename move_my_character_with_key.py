@@ -5,7 +5,7 @@ back_ground = load_image('TUK_GROUND.png')
 character = load_image('my_character.png')
 
 def handle_events():
-    global running, dir, moving, frame
+    global running, dir, moving, frame, size
     events = get_events()
     for event in events:
         if event.type == SDL_QUIT:
@@ -25,6 +25,12 @@ def handle_events():
             elif event.key == SDLK_RIGHT:
                 dir = 0
                 moving = True
+            elif event.key == SDLK_EQUALS:
+                if size < 20:
+                    size += 1
+            elif event.key == SDLK_MINUS:
+                if size > 5:
+                    size -= 1
         elif event.type == SDL_KEYUP:
             moving = False
             if dir == 0:
