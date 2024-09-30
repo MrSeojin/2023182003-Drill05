@@ -1,3 +1,4 @@
+#2023182003 게임공학과 김서진_Drill_05
 from pico2d import*
 
 open_canvas()
