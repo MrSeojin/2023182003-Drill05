@@ -71,7 +71,7 @@ while running:
             x += 10
             if x + 2 * size >= 799:
                 x = 799 - 2 * size
-        frame = (frame + 1)%4
+        frame = (frame + 1) % 4
     delay(0.05)
 
 close_canvas()
